@@ -2,6 +2,8 @@ plugins {
     id 'org.springframework.boot' version '2.2.0.RELEASE'
     id 'io.spring.dependency-management' version '1.0.8.RELEASE'
     id 'java'
+    id 'ru.vyarus.quality' version '3.4.0'
+
 }
 
 group = 'com.schiavetti.project'
@@ -16,6 +18,20 @@ configurations {
     compileOnly {
         extendsFrom annotationProcessor
     }
+}
+
+quality{
+    checkstyle = true
+    pmd = true
+    spotbugs = true
+    codenarc = true
+
+    consoleReporting = true
+    htmlReports = true
+    strict = true
+    enabled = true
+
+    exclude 'com/schiavetti/project/financialcontroller/FinancialControllerApplication.java'
 }
 
 repositories {
