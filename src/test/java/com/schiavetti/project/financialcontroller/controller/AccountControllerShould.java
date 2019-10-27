@@ -11,11 +11,12 @@ public class AccountControllerShould {
 
     @Test
     void return_an_new_account(){
-        AccountModel accountModel = new AccountModel();
-        accountModel.setName("ABN Amro");
-        accountModel.setInitialBalance(1000L);
-        accountModel.setCurrency("EURO");
-        accountModel.setInitialDate(LocalDate.of(2019, 10, 02));
+        AccountModel accountModel = AccountModel.builder()
+                .name("ABN Amro")
+                .currency("EURO")
+                .initialBalance(1000L)
+                .initialDate(LocalDate.of(2019, 10, 02))
+                .build();
 
         assertEquals("ABN Amro",accountModel.getName());
         assertEquals(1000L, accountModel.getInitialBalance());
