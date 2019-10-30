@@ -1,15 +1,20 @@
-package com.schiavetti.project.financialcontroller;
+package com.schiavetti.project.financialcontroller.model;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+
+import lombok.*;
 
 import java.time.LocalDate;
 import java.util.Currency;
 
+/**
+ * Account model class.
+ * @author Ricardo Schiavetti
+ */
 @Getter
 @Setter
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class AccountModel {
 
     private String name;
