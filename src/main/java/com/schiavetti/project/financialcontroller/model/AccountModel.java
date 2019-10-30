@@ -15,8 +15,7 @@ import java.util.Currency;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class AccountModel {
-
+public class AccountModel extends BaseEntity {
     private String name;
     private Long initialBalance;
     private Currency currency;
