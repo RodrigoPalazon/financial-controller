@@ -1,6 +1,6 @@
 package com.schiavetti.project.financialcontroller.controller;
 
-import com.schiavetti.project.financialcontroller.model.AccountModel;
+import com.schiavetti.project.financialcontroller.model.Account;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
@@ -21,7 +21,7 @@ public class AccountControllerShould {
     void return_an_new_account_by(){
 
         AccountController accountController = new AccountController();
-        AccountModel accountModel = accountController.createAccountBy(ACCOUNT_NAME, CURRENCY, INITIAL_BALANCE, INITIAL_DATE);
+        Account accountModel = accountController.createAccountBy(ACCOUNT_NAME, CURRENCY, INITIAL_BALANCE, INITIAL_DATE);
 
         assertEquals("ABN Amro",accountModel.getName());
         assertEquals(1000L, accountModel.getInitialBalance());

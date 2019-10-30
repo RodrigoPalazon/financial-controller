@@ -9,8 +9,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class SubCategory extends BaseEntity {
-    private Category category;
+public class CategoryModel extends BaseEntity {
     private String name;
     private String description;
 }
