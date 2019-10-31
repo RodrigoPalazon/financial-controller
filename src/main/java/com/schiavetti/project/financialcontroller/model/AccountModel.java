@@ -5,11 +5,14 @@ import lombok.*;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
 import java.time.LocalDate;
 import java.util.Currency;
+import java.util.Set;
 
 /**
  * Account model class.
+ *
  * @author Ricardo Schiavetti
  */
 @Getter
@@ -17,7 +20,7 @@ import java.util.Currency;
 @Builder(builderMethodName = "with")
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity(name = "Account")
+@Entity(name = "Accounts")
 public class AccountModel extends BaseEntity {
 
     @Column
@@ -31,4 +34,7 @@ public class AccountModel extends BaseEntity {
 
     @Column
     private LocalDate initialDate;
+
+    @OneToMany(mappedBy = "account")
+    private Set<TransactionModel> transactions;
 }
