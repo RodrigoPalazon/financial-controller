@@ -4,6 +4,10 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
+/**
+ * Transaction class.
+ * @author Ricardo Schiavetti
+ */
 @Getter
 @Setter
 @Builder

@@ -5,6 +5,10 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ * Sub Category class.
+ * @author Ricardo Schiavetti
+ */
 @Getter
 @Setter
 @AllArgsConstructor
