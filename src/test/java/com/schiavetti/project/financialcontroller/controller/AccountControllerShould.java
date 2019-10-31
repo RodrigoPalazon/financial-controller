@@ -25,7 +25,7 @@ public class AccountControllerShould {
     private final Currency CURRENCY = Currency.getInstance("EUR");
     private final LocalDate INITIAL_DATE = LocalDate.of(2019, 10, 02);
 
-    private final AccountModel ACCOUNT_DUMMY = AccountModel.builder()
+    private final AccountModel ACCOUNT_DUMMY = AccountModel.with()
             .name(ACCOUNT_NAME)
             .currency(CURRENCY)
             .initialBalance(INITIAL_BALANCE)
@@ -42,11 +42,9 @@ public class AccountControllerShould {
 
     @Test
     void return_an_new_account_by_name_currency_balance_and_date() {
-
         AccountController accountController = new AccountController(accountService);
         AccountModel createdAccount = accountController.createAccountBy(ACCOUNT_NAME, CURRENCY, INITIAL_BALANCE, INITIAL_DATE);
 
         assertEquals(ACCOUNT_DUMMY, createdAccount);
-
     }
 }

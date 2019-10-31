@@ -7,12 +7,13 @@ import java.util.Currency;
 
 /**
  * Account service class.
+ *
  * @author Ricardo Schiavetti
  */
 public class AccountService {
     public AccountModel createAccountBy(final String accountName, final Currency currency,
                                         final Long initialBalance, final LocalDate initialDate) {
-        return AccountModel.builder()
+        return AccountModel.with()
                 .name(accountName)
                 .currency(currency)
                 .initialBalance(initialBalance)
