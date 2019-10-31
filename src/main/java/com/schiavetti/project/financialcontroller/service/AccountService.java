@@ -5,13 +5,18 @@ import com.schiavetti.project.financialcontroller.model.AccountModel;
 import java.time.LocalDate;
 import java.util.Currency;
 
+/**
+ * Account service class.
+ * @author Ricardo Schiavetti
+ */
 public class AccountService {
-    public AccountModel createAccountBy(String account_name, Currency currency, Long initial_balance, LocalDate initial_date) {
+    public AccountModel createAccountBy(final String accountName, final Currency currency,
+                                        final Long initialBalance, final LocalDate initialDate) {
         return AccountModel.builder()
-                .name(account_name)
+                .name(accountName)
                 .currency(currency)
-                .initialBalance(initial_balance)
-                .initialDate(initial_date)
+                .initialBalance(initialBalance)
+                .initialDate(initialDate)
                 .build();
     }
 }
